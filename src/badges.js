@@ -13,6 +13,20 @@ export class Badges extends LitElement {
     
     constructor() {
         this.badges = [];
+        this.updateRoser();
+    }
+
+    async updateRoster() {
+        const address = new URL('../api/badges-api.js', import.meta.url).href;
+        fetch(address).then((response) => {
+            if (response.ok) {
+                return response.json()
+            }
+            return [];
+        })
+        .then((data) => {
+            this.badges = data;
+        })
     }
     
     static get styles() {
