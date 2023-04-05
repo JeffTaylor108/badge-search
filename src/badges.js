@@ -12,26 +12,7 @@ export class Badges extends LitElement {
     }
     
     constructor() {
-        this.badges = [{
-            "subject": "Technology & Information",
-            "title": "APA Style Citations: Introduction",
-            "creator": "Victoria Raish"
-        },
-        {
-            "subject": "Education",
-            "title": "IST Career Resources",
-            "creator": "Cassie Rosas-Carson"
-        },
-        {
-            "subject": "Professional Skills",
-            "title": "IST Careers - Meet a Coach - level 2",
-            "creator": "Rita Griffith"
-        },
-        {
-            "subject": "Agriculture & Natural Resources",
-            "title": "Treat Yourself",
-            "creator": "Allain Daigle"
-        }];
+        this.badges = [];
     }
     
     static get styles() {
