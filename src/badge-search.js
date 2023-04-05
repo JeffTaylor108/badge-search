@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 
-class BadgeSearch extends LitElement {
+export class BadgeSearch extends LitElement {
   static properties = {
     subject: { type: String },
     title: { type: String },
