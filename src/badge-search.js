@@ -1,7 +1,5 @@
 import { LitElement, html, css } from 'lit';
 
-const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
-
 class BadgeSearch extends LitElement {
   static properties = {
     subject: { type: String },
@@ -12,215 +10,215 @@ class BadgeSearch extends LitElement {
   static styles = css`
   div {
     display: block;
-}
-.page-content {
-    margin-top: 0px;
-    padding: 0px;
-}
-.page-head .page-title {
-    display: inline-block;
-    float: left;
-    padding: 5px 0 10px 0;
-}
-h1 {
-    color: #333333;
-    font-size: 36px;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
+  }
+  .page-content {
+      margin-top: 0px;
+      padding: 0px;
+  }
+  .page-head .page-title {
+      display: inline-block;
+      float: left;
+      padding: 5px 0 10px 0;
+  }
+  h1 {
+      color: #333333;
+      font-size: 36px;
+      margin-top: 0;
+      margin-bottom: 20px;
+  }
 
-.search {
-    margin-top: 30px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding: 10px;
-    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.3);
-}
+  .search {
+      margin-top: 30px;
+      margin-right: 5px;
+      margin-left: 5px;
+      padding: 10px;
+      box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.3);
+  }
 
-.portlet.light .portlet-body {
-    padding-top: 8px;
-}
+  .portlet.light .portlet-body {
+      padding-top: 8px;
+  }
 
-.portlet .portlet-body {
-    clear: both;
-}
-.tiles {
-    margin-right: -10px;
-}
-.tiles .tile.category-14 {
-    background: transparent;
-    border: 1px solid #fff;
-    border-color: #3e98d3;
-}
+  .portlet .portlet-body {
+      clear: both;
+  }
+  .tiles {
+      margin-right: -10px;
+  }
+  .tiles .tile.category-14 {
+      background: transparent;
+      border: 1px solid #fff;
+      border-color: #3e98d3;
+  }
 
-.badge-top {
-    background-color: #cfe6f4;
-    border-left: 15px solid #3e98d3;
-    color: #333333;
-}
+  .badge-top {
+      background-color: #cfe6f4;
+      border-left: 15px solid #3e98d3;
+      color: #333333;
+  }
 
-.tile-body, .tiles .tile.category-14 .tile-object {
-    border-left: 15px solid #3e98d3;
-}
-.tiles .tile-object {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    min-height: 30px;
-    background-color: transparent;
-    *zoom: 1;
-}
-.tiles .tile.category-14 .tile-object > .name {
-    margin-bottom: 2px;
-}
+  .tile-body, .tiles .tile.category-14 .tile-object {
+      border-left: 15px solid #3e98d3;
+  }
+  .tiles .tile-object {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      min-height: 30px;
+      background-color: transparent;
+      *zoom: 1;
+  }
+  .tiles .tile.category-14 .tile-object > .name {
+      margin-bottom: 2px;
+  }
 
 
-.tiles .tile.category-5 {
-    background: transparent;
-    border: 1px solid #fff;
-    border-color: #efc22d;
-}
+  .tiles .tile.category-5 {
+      background: transparent;
+      border: 1px solid #fff;
+      border-color: #efc22d;
+  }
 
-.tiles .tile.category-5 .badge-top {
-    background-color: #fcf2d3;
-    border-left: 15px solid #efc22d;
-    color: #333333;
-}
+  .tiles .tile.category-5 .badge-top {
+      background-color: #fcf2d3;
+      border-left: 15px solid #efc22d;
+      color: #333333;
+  }
 
-.tiles .tile.category-5 .tile-body, .tiles .tile.category-5 .tile-object {
-    border-left: 15px solid #efc22d;
-}
+  .tiles .tile.category-5 .tile-body, .tiles .tile.category-5 .tile-object {
+      border-left: 15px solid #efc22d;
+  }
 
-h3, .h3 {
-    font-size: 24px;
-}
-h1, .h1, h2, .h2, h3, .h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
+  h3, .h3 {
+      font-size: 24px;
+  }
+  h1, .h1, h2, .h2, h3, .h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+  }
 
-.tiles .tile.category-13 {
-    background: transparent;
-    border: 1px solid #fff;
-    border-color: #6884C1;
-}
+  .tiles .tile.category-13 {
+      background: transparent;
+      border: 1px solid #fff;
+      border-color: #6884C1;
+  }
 
-.tiles .tile.category-13 .badge-top {
-    background-color: #e7ebf5;
-    border-left: 15px solid #6884C1;
-    color: #333333;
-}
+  .tiles .tile.category-13 .badge-top {
+      background-color: #e7ebf5;
+      border-left: 15px solid #6884C1;
+      color: #333333;
+  }
 
-.tiles .tile.category-13 .tile-body, .tiles .tile.category-13 .tile-object {
-    border-left: 15px solid #6884C1;
-}
+  .tiles .tile.category-13 .tile-body, .tiles .tile.category-13 .tile-object {
+      border-left: 15px solid #6884C1;
+  }
 
-.pull-right {
-    float: right;
-}
+  .pull-right {
+      float: right;
+  }
 
-.tiles .badge-tile.tile .tile-body h3, .tiles .badge-tile.tile .tile-body .h3, .tiles .group-tile.tile .tile-body h3, .tiles .group-tile.tile .tile-body .h3, .tiles .portfolio-tile.tile .tile-body h3, .tiles .portfolio-tile.tile .tile-body .h3, .tiles .user-tile.tile .tile-body h3, .tiles .user-tile.tile .tile-body .h3, .tiles .mission-tile.tile .tile-body h3, .tiles .mission-tile.tile .tile-body .h3 {
-    word-break: break-word;
-    color: #333333;
-    line-height: 0.9em;
-    margin-top: 0;
-    margin-bottom: 5px;
-}
+  .tiles .badge-tile.tile .tile-body h3, .tiles .badge-tile.tile .tile-body .h3, .tiles .group-tile.tile .tile-body h3, .tiles .group-tile.tile .tile-body .h3, .tiles .portfolio-tile.tile .tile-body h3, .tiles .portfolio-tile.tile .tile-body .h3, .tiles .user-tile.tile .tile-body h3, .tiles .user-tile.tile .tile-body .h3, .tiles .mission-tile.tile .tile-body h3, .tiles .mission-tile.tile .tile-body .h3 {
+      word-break: break-word;
+      color: #333333;
+      line-height: 0.9em;
+      margin-top: 0;
+      margin-bottom: 5px;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "effra", sans-serif;
-    font-weight: 300;
-}
-.tiles .tile.category-13 .tile-object > .name {
-    margin-bottom: 2px;
-}
+  h1, h2, h3, h4, h5, h6 {
+      font-family: "effra", sans-serif;
+      font-weight: 300;
+  }
+  .tiles .tile.category-13 .tile-object > .name {
+      margin-bottom: 2px;
+  }
 
-.tiles .tile.category-5 .tile-object > .name {
-    margin-bottom: 2px;
-}
+  .tiles .tile.category-5 .tile-object > .name {
+      margin-bottom: 2px;
+  }
 
-.tiles .tile.category-1 {
-    background: transparent;
-    border: 1px solid #fff;
-    border-color: #4FA86E;
-}
+  .tiles .tile.category-1 {
+      background: transparent;
+      border: 1px solid #fff;
+      border-color: #4FA86E;
+  }
 
-.tiles .badge-tile.tile, .tiles .group-tile.tile, .tiles .portfolio-tile.tile, .tiles .user-tile.tile, .tiles .mission-tile.tile {
-    border-radius: 6px;
-    background-color: #fff;
-}
+  .tiles .badge-tile.tile, .tiles .group-tile.tile, .tiles .portfolio-tile.tile, .tiles .user-tile.tile, .tiles .mission-tile.tile {
+      border-radius: 6px;
+      background-color: #fff;
+  }
 
-.tiles .tile.double {
-    width: 280px !important;
-}
+  .tiles .tile.double {
+      width: 280px !important;
+  }
 
-.tiles .tile {
-    display: block;
-    letter-spacing: 0.02em;
-    float: left;
-    height: 135px;
-    width: 135px !important;
-    cursor: pointer;
-    text-decoration: none;
-    color: #ffffff;
-    position: relative;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 20px;
-    overflow: hidden;
-    border: 4px solid transparent;
-    margin: 0 10px 10px 0;
-}
+  .tiles .tile {
+      display: block;
+      letter-spacing: 0.02em;
+      float: left;
+      height: 135px;
+      width: 135px !important;
+      cursor: pointer;
+      text-decoration: none;
+      color: #ffffff;
+      position: relative;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 20px;
+      overflow: hidden;
+      border: 4px solid transparent;
+      margin: 0 10px 10px 0;
+  }
 
-.tiles .tile.category-1 .badge-top {
-    background-color: #cce7d6;
-    border-left: 15px solid #4FA86E;
-    color: #333333;
-}
+  .tiles .tile.category-1 .badge-top {
+      background-color: #cce7d6;
+      border-left: 15px solid #4FA86E;
+      color: #333333;
+  }
 
-.tiles .badge-tile.tile .badge-top, .tiles .badge-tile.tile .tile-top, .tiles .badge-tile.tile .portfolio-top, .tiles .badge-tile.tile .user-top, .tiles .group-tile.tile .badge-top, .tiles .group-tile.tile .tile-top, .tiles .group-tile.tile .portfolio-top, .tiles .group-tile.tile .user-top, .tiles .portfolio-tile.tile .badge-top, .tiles .portfolio-tile.tile .tile-top, .tiles .portfolio-tile.tile .portfolio-top, .tiles .portfolio-tile.tile .user-top, .tiles .user-tile.tile .badge-top, .tiles .user-tile.tile .tile-top, .tiles .user-tile.tile .portfolio-top, .tiles .user-tile.tile .user-top, .tiles .mission-tile.tile .badge-top, .tiles .mission-tile.tile .tile-top, .tiles .mission-tile.tile .portfolio-top, .tiles .mission-tile.tile .user-top {
-    font-weight: 400;
-    height: 2.25em;
-    line-height: 2.25em;
-    padding: 0 0.75em;
-}
+  .tiles .badge-tile.tile .badge-top, .tiles .badge-tile.tile .tile-top, .tiles .badge-tile.tile .portfolio-top, .tiles .badge-tile.tile .user-top, .tiles .group-tile.tile .badge-top, .tiles .group-tile.tile .tile-top, .tiles .group-tile.tile .portfolio-top, .tiles .group-tile.tile .user-top, .tiles .portfolio-tile.tile .badge-top, .tiles .portfolio-tile.tile .tile-top, .tiles .portfolio-tile.tile .portfolio-top, .tiles .portfolio-tile.tile .user-top, .tiles .user-tile.tile .badge-top, .tiles .user-tile.tile .tile-top, .tiles .user-tile.tile .portfolio-top, .tiles .user-tile.tile .user-top, .tiles .mission-tile.tile .badge-top, .tiles .mission-tile.tile .tile-top, .tiles .mission-tile.tile .portfolio-top, .tiles .mission-tile.tile .user-top {
+      font-weight: 400;
+      height: 2.25em;
+      line-height: 2.25em;
+      padding: 0 0.75em;
+  }
 
-.tiles .tile.category-1 .tile-body, .tiles .tile.category-1 .tile-object {
-    border-left: 15px solid #4FA86E;
-}
+  .tiles .tile.category-1 .tile-body, .tiles .tile.category-1 .tile-object {
+      border-left: 15px solid #4FA86E;
+  }
 
-.tiles .tile .tile-body {
-    height: 100%;
-    vertical-align: top;
-    padding: 10px 10px;
-    overflow: hidden;
-    position: relative;
-    font-weight: 400;
-    font-size: 12px;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
+  .tiles .tile .tile-body {
+      height: 100%;
+      vertical-align: top;
+      padding: 10px 10px;
+      overflow: hidden;
+      position: relative;
+      font-weight: 400;
+      font-size: 12px;
+      color: #ffffff;
+      margin-bottom: 10px;
+  }
 
-.tiles .tile.category-1 .tile-object > .name {
-    margin-bottom: 2px;
-}
+  .tiles .tile.category-1 .tile-object > .name {
+      margin-bottom: 2px;
+  }
 
-.tiles .badge-tile.tile .tile-object > .name, .tiles .group-tile.tile .tile-object > .name, .tiles .portfolio-tile.tile .tile-object > .name, .tiles .user-tile.tile .tile-object > .name, .tiles .mission-tile.tile .tile-object > .name {
-    color: #333333;
-}
+  .tiles .badge-tile.tile .tile-object > .name, .tiles .group-tile.tile .tile-object > .name, .tiles .portfolio-tile.tile .tile-object > .name, .tiles .user-tile.tile .tile-object > .name, .tiles .mission-tile.tile .tile-object > .name {
+      color: #333333;
+  }
 
-.tiles .tile .tile-object > .name {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-right: 15px;
-    font-weight: 400;
-    font-size: 13px;
-    color: #ffffff;
-}
+  .tiles .tile .tile-object > .name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin-bottom: 5px;
+      margin-left: 10px;
+      margin-right: 15px;
+      font-weight: 400;
+      font-size: 13px;
+      color: #ffffff;
+  }
   `;
 
   constructor() {
@@ -287,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
 
     <div class="tile-object">
       <div class="name">
-        Creator: test
+        Creator: ${this.creator}
       </div>
     </div>
 </a>
