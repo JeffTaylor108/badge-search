@@ -4,7 +4,9 @@ const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 
 class BadgeSearch extends LitElement {
   static properties = {
-    header: { type: String },
+    subject: { type: String },
+    title: { type: String },
+    creator: { type: String },
   }
 
   static styles = css`
@@ -223,7 +225,9 @@ h1, h2, h3, h4, h5, h6 {
 
   constructor() {
     super();
-    this.header = 'My app';
+    this.subject = 'Technology & Information';
+    this.title = 'APA Style Citations: Introduction';
+    this.creator = 'Victoria Raish';
   }
 
   render() {
@@ -269,7 +273,7 @@ h1, h2, h3, h4, h5, h6 {
 <a class="tile badge-tile double category-14" id="badge_337" data-badge-id="337" data-model="badge" href="/badges/337/earn">
 
     <div class="badge-top">
-      <span class="pull-left">Technology &amp; Information</span>
+      <span class="pull-left">${this.subject}</span>
     </div>
 
     <div class="tile-body">
@@ -278,12 +282,12 @@ h1, h2, h3, h4, h5, h6 {
         <div style="width: 60px; height: 60px; display: block; background-size: contain; background-repeat: no-repeat; background-image: url(/uploads/badge/image/337/APA_Style.png)"></div>
       </div>
 
-      <h3> APA Style Citations: Introduction</h3>
+      <h3> ${this.title}</h3>
     </div>
 
     <div class="tile-object">
       <div class="name">
-        Creator: Victoria Raish 
+        Creator: test
       </div>
     </div>
 </a>
