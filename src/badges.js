@@ -1,10 +1,12 @@
 import { LitElement, html, css } from 'lit';
 import "./badge-search.js";
+import "./search-widget.js";
 
 export class Badges extends LitElement {
     static get tag() {
         return 'badges';
     }
+
     static get properties() {
         return {
             badges: { type: Array },
@@ -12,21 +14,11 @@ export class Badges extends LitElement {
     }
     
     constructor() {
+        super();
         this.badges = [];
-        this.updateRoser();
-    }
-
-    async updateRoster() {
-        const address = new URL('../api/badges-api.js', import.meta.url).href;
-        fetch(address).then((response) => {
-            if (response.ok) {
-                return response.json()
-            }
-            return [];
-        })
-        .then((data) => {
-            this.badges = data;
-        })
+        this.getSearchResults().then((results) => {
+            this.badges = results;
+        });
     }
     
     static get styles() {
@@ -44,8 +36,29 @@ export class Badges extends LitElement {
     `;
     }
 
+    async getSearchResults(value = '') {
+        const address = `/api/badges-api?search=${value}`;
+        const results = await fetch(address).then((response) => {
+            if (response.ok) {
+                return response.json()
+            }
+            return [];
+        })
+        .then((data) => {
+            return data;
+        })
+
+        return results;
+    }
+
+    async _handleSearchEvent(e) {
+        const term = e.detail.value;
+        this.badges = this.getSearchResults(term);
+    }
+
     render() {
         return html`
+            <search-widget @value-changed="${this._handleSearchEvent}"></search-widget>
             <div class="wrapper">
                 ${this.badges.map(badge => html`
                 <div class="item">
