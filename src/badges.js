@@ -49,7 +49,7 @@ export class Badges extends LitElement {
             <div class="wrapper">
                 ${this.badges.map(badge => html`
                 <div class="item">
-                    <badge-search subject="${badge.subject}" title="${badge.title}" creator="${badge.creator}">
+                    <badge-search subject="${badge.subject}" badgeTitle="${badge.badgeTitle}" creator="${badge.creator}">
                 </div>
                 `)}
             </div>

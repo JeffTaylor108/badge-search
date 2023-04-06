@@ -18,7 +18,10 @@
     "start": "web-dev-server"
   },
   "dependencies": {
+    "-": "^0.0.1",
+    "@lrnwebcomponents/simple-icon": "^4.2.0",
     "lit": "^2.0.2",
+    "s": "^1.0.0",
     "vercel": "^28.18.3"
   },
   "devDependencies": {
