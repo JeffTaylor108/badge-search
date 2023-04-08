@@ -1,6 +1,5 @@
 import { LitElement, html, css } from 'lit';
-import "./badge-component.js";
-import "./search-widget.js";
+import "./badge-component";
 
 export class Badges extends LitElement {
     static get tag() {
@@ -10,14 +9,42 @@ export class Badges extends LitElement {
     static get properties() {
         return {
             badges: { type: Array },
+            searchForThis: { type: String }
         }
     }
     
     constructor() {
         super();
         this.badges = [];
-        this.getSearchResults().then((results) => {
-            this.badges = results;
+        this.updateBadges();
+        this.searchForThis = '';
+        this.searchThis(this.badges,this.searchForThis);
+    }
+
+    updateBadges() {
+        const address = '../api/badges-api';
+        fetch(address).then((response) => {
+            if (response.ok) {
+                return response.json()
+            }
+            return [];
+        })
+        .then((data) => {
+            this.badges = data;
+        });
+    }
+
+    searchThis(items, searchForThis){
+        return items.filter((list) => 
+        {
+          for (var item in list)
+          {
+            if (list[item].toString().toLowerCase().includes(searchForThis.toLowerCase()))
+            {
+              return true;
+            }
+          }
+          return false;
         });
     }
     
@@ -36,33 +63,12 @@ export class Badges extends LitElement {
     `;
     }
 
-    async getSearchResults(value = '') {
-        const address = `/api/badges-api?search=${value}`;
-        const results = await fetch(address).then((response) => {
-            if (response.ok) {
-                return response.json()
-            }
-            return [];
-        })
-        .then((data) => {
-            return data;
-        })
-
-        return results;
-    }
-
-    async _handleSearchEvent(e) {
-        const term = e.detail.value;
-        this.badges = this.getSearchResults(term);
-    }
-
     render() {
         return html`
-            <search-widget @value-changed="${this._handleSearchEvent}"></search-widget>
             <div class="wrapper">
-                ${this.badges.map(badge => html`
+                ${this.searchThis(this.badges,this.searchForThis).map(badge => html`
                 <div class="item">
-                    <badge-search subject="${badge.subject}" badgeTitle="${badge.badgeTitle}" creator="${badge.creator}">
+                    <badge-component subject="${badge.subject}" badgeTitle="${badge.badgeTitle}" creator="${badge.creator}"></badge-component>
                 </div>
                 `)}
             </div>
