@@ -6,7 +6,7 @@ import { Badges } from './badges';
 
 export class BadgeSearch extends LitElement {
   static properties = {
-    data: { type: Array },
+    data: { type: Array},
     searchForThis: { type: String }
   }
 
@@ -65,7 +65,6 @@ export class BadgeSearch extends LitElement {
 
   constructor() {
     super();
-    this.data = [];
     this.searchForThis = '';
   }
 

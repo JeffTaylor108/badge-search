@@ -6,8 +6,7 @@ class BadgeComponent extends LitElement {
   static properties = {
     subject: { type: String },
     badgeTitle: { type: String },
-    creator: { type: String },
-    icon: { type: String },
+    creator: { type: String }
   }
 
   static styles = css`
@@ -128,7 +127,7 @@ class BadgeComponent extends LitElement {
         font-size: 13px;
         color: #ffffff;
     }
-    
+
   `;
 
   constructor() {
@@ -136,36 +135,35 @@ class BadgeComponent extends LitElement {
     this.subject = 'Technology & Information';
     this.badgeTitle = 'APA Style Citations: Introduction';
     this.creator = 'Victoria Raish';
-    this.icon = 'default';
   }
 
   render() {
 
-return html`
-    <div id="badges" class="tiles">
-    <div class="tile badge-tile double category-14">
+    return html`
+        <div id="badges" class="tiles">
+        <div class="tile badge-tile double category-14">
 
-    <div class="badge-top">
-    <span class="pull-left">${this.subject}</span>
-    </div>
-
-        <div class="tile-body">
-        <div class="badge-image pull-right" style="width: 60px; height: 60px; display: block;">
-            <div style="width: 60px; height: 60px; display: block; background-size: contain; background-repeat: no-repeat; background-image: url(/uploads/badge/image/337/APA_Style.png)"></div>
+        <div class="badge-top">
+        <span class="pull-left">${this.subject}</span>
         </div>
 
-        <h3> ${this.badgeTitle}</h3>
-        </div>
+            <div class="tile-body">
+            <div class="badge-image pull-right" style="width: 60px; height: 60px; display: block;">
+                <div style="width: 60px; height: 60px; display: block; background-size: contain; background-repeat: no-repeat; background-image: url(/uploads/badge/image/337/APA_Style.png)"></div>
+            </div>
 
-        <div class="tile-object">
-        <div class="name">
-            ${this.creator}
+            <h3> ${this.badgeTitle}</h3>
+            </div>
+
+            <div class="tile-object">
+            <div class="name">
+                ${this.creator}
+            </div>
+            </div>
         </div>
         </div>
-    </div>
-    </div>
-     `;
-  }
+        `;
+    }
 }
 
 customElements.define('badge-component', BadgeComponent);
