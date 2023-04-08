@@ -2,7 +2,7 @@
 export default async function handler(req, res) {
 
     const search = req.query.search || '';
-    var badgeList = [
+    const badgeList = [
         {
             "subject": "Technology & Information",
             "badgeTitle": "APA Style Citations: Introduction",
@@ -34,7 +34,7 @@ export default async function handler(req, res) {
     });
 
     console.log(badgeList);
-    
+
     res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
     res.setHeader("Access-Control-Allow-Credentials", "true");
     res.setHeader("Access-Control-Allow-Origin", "*");

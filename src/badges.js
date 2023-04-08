@@ -26,7 +26,7 @@ export class Badges extends LitElement {
         :host {
             display: block
         }
-        .wraper {
+        .wrapper {
             border: 2px solid black;
             display: flex;
         }
