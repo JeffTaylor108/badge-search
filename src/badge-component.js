@@ -149,7 +149,7 @@ class BadgeComponent extends LitElement {
 
             <div class="tile-body">
             <div class="badge-image pull-right" style="width: 60px; height: 60px; display: block;">
-                <div style="width: 60px; height: 60px; display: block; background-size: contain; background-repeat: no-repeat; background-image: url(/uploads/badge/image/337/APA_Style.png)"></div>
+                <div style="width: 60px; height: 60px; display: block; background-size: contain; background-repeat: no-repeat;)"></div>
             </div>
 
             <h3> ${this.badgeTitle}</h3>

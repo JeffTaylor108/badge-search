@@ -22,7 +22,7 @@ export class Badges extends LitElement {
     }
 
     updateBadges() {
-        const address = '../api/badges-api';
+        const address = '../api/badges-api.js';
         fetch(address).then((response) => {
             if (response.ok) {
                 return response.json()
