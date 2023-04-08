@@ -54,45 +54,53 @@ export class BadgeSearch extends LitElement {
         font-family: "effra", sans-serif;
         font-weight: 300;
     }
-    
+
+    .searchWidget{
+      width: 80%;
+      margin: left;
+      padding: 12px;
+    }
+
   `;
 
   constructor() {
     super();
-    this.subject = 'Technology & Information';
-    this.badgeTitle = 'APA Style Citations: Introduction';
-    this.creator = 'Victoria Raish';
+    this.data = [];
+    this.searchForThis = '';
+  }
+
+  wordChanged(e) {
+    this.searchForThis = e.detail.value;
   }
 
   render() {
     return html`
     <div class="page-content-wrapper">
-    <div class="page-content">
-      <div class="page-head">
-        <div class="page-title">
-          <h1>Explore</h1>
+      <div class="page-content">
+        <div class="page-head">
+          <div class="page-title">
+            <h1>Explore</h1>
+          </div>
         </div>
-      </div>
 
-      <div class="row ng-scope" ng-      controller="ExploreCtrl">
-        <div class="col-lg-12">
-          <div class="portlet light">
-            <div class="portlet-body">
-              <div class="h3">
-            Explore our content in a self-guided manner. Want us to guide you through learning new skills? Try out Missions. Looking for other people with similar focus? Find them in Groups. Interested in viewing all the options within a certain subject area? You can do that with Topics.
+        <div class="row ng-scope" ng-      controller="ExploreCtrl">
+          <div class="col-lg-12">
+            <div class="portlet light">
+              <div class="portlet-body">
+                <div class="h3">
+              Explore our content in a self-guided manner. Want us to guide you through learning new skills? Try out Missions. Looking for other people with similar focus? Find them in Groups. Interested in viewing all the options within a certain subject area? You can do that with Topics.
+                </div>
               </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-          <h2 class="caption bold">Looking for something brand spankin' new? Here are the most recently added badges!</h2>
+        <h2 class="caption bold">Looking for something brand spankin' new? Here are the most recently added badges!</h2>
+        <div class = "searchBar">
+          <search-widget @word-changed="${this.wordChanged}"></search-widget>
         </div>
-          </div>
+        <badges-list searchForThis="${this.searchForThis}"></badges-list>
       </div>
     </div>
-  </div>
-  </div>
-  </div>
     `;
   }
 }

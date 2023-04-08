@@ -4,7 +4,7 @@ import "./search-widget.js";
 
 export class Badges extends LitElement {
     static get tag() {
-        return 'badges';
+        return 'badges-list';
     }
 
     static get properties() {
