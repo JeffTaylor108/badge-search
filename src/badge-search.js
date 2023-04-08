@@ -14,38 +14,47 @@ export class BadgeSearch extends LitElement {
     div {
     display: block;
     }
+
     .page-content {
         margin-top: 0px;
         padding: 0px;
     }
+
     .page-head .page-title {
         display: inline-block;
         float: left;
         padding: 5px 0 10px 0;
     }
+
     h1 {
         color: #333333;
         font-size: 36px;
         margin-top: 0;
         margin-bottom: 20px;
     }
+
     .portlet.light .portlet-body {
         padding-top: 8px;
     }
+
     .portlet .portlet-body {
         clear: both;
     }
+
     h3, .h3 {
         font-size: 24px;
     }
+
     h1, .h1, h2, .h2, h3, .h3 {
         margin-top: 20px;
         margin-bottom: 10px;
     }
+
     h1, h2, h3, h4, h5, h6 {
         font-family: "effra", sans-serif;
         font-weight: 300;
     }
+    
   `;
 
   constructor() {
