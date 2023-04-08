@@ -125,27 +125,27 @@ class BadgeComponent extends LitElement {
 
 return html`
     <div id="badges" class="tiles">
-<div class="tile badge-tile double category-14">
+    <div class="tile badge-tile double category-14">
 
-<div class="badge-top">
-   <span class="pull-left">Technology & Information</span>
- </div>
-
-    <div class="tile-body">
-      <div class="badge-image pull-right" style="width: 60px; height: 60px; display: block;">
-        <div style="width: 60px; height: 60px; display: block; background-size: contain; background-repeat: no-repeat; background-image: url(/uploads/badge/image/337/APA_Style.png)"></div>
-      </div>
-
-      <h3> APA Style Citations: Introduction</h3>
+    <div class="badge-top">
+    <span class="pull-left">${this.subject}</span>
     </div>
 
-    <div class="tile-object">
-      <div class="name">
-        Creator: Victoria Raish 
-      </div>
+        <div class="tile-body">
+        <div class="badge-image pull-right" style="width: 60px; height: 60px; display: block;">
+            <div style="width: 60px; height: 60px; display: block; background-size: contain; background-repeat: no-repeat; background-image: url(/uploads/badge/image/337/APA_Style.png)"></div>
+        </div>
+
+        <h3> ${this.badgeTitle}</h3>
+        </div>
+
+        <div class="tile-object">
+        <div class="name">
+            ${this.creator}
+        </div>
+        </div>
     </div>
-</div>
-</div>
+    </div>
      `;
   }
 }
