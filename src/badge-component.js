@@ -13,6 +13,7 @@ class BadgeComponent extends LitElement {
   static styles = css`
     .tiles {
     margin-right: -10px;
+    margin-left: 10px;
     }
     .tiles .tile.category-14 {
         background: transparent;

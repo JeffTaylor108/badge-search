@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit';
-import "./badge-search.js";
+import "./badge-component.js";
 import "./search-widget.js";
 
 export class Badges extends LitElement {
