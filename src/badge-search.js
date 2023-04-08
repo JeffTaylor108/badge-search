@@ -75,7 +75,7 @@ export class BadgeSearch extends LitElement {
   render() {
     return html`
     <div class="page-content-wrapper">
-      <div class="page-content">
+      <div class="page-content">  
         <div class="page-head">
           <div class="page-title">
             <h1>Explore</h1>
