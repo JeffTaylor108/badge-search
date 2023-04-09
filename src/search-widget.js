@@ -4,7 +4,7 @@ import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
 export class SearchWidget extends LitElement {
   static properties = {
-    input: { type: String }
+    value: { type: String }
   }
 
   static styles = css`
@@ -20,28 +20,22 @@ export class SearchWidget extends LitElement {
 
   constructor() {
     super();
-    this.input = '';
+    this.value = '';
   }
 
-  inputChange(e) {
-    this.input = this.shadowRoot.querySelector('input').value;
-  }
-
-  update(changedProperties) {
-    super.update(changedProperties);
-    if (changedProperties.has('input')) {
-      this.dispatchEvent(new CustomEvent('input-changed', {
-        detail: {
-          value: this.input
-        }
-      }));
-    }
+  _handleInput(e) {
+    this.value = e.target.value;
+    this.dispatchEvent(new CustomEvent('value-changed', {
+      detail: {
+        value: this.value,
+      }
+    }));
   }
 
   render() {
     return html`
         <simple-icon icon="icons:search"></simple-icon>
-        <input type="text" value="${this.input}" @input="${this.inputChange}"/>
+        <input type="text" value="${this.value}" @input="${this._handleInput}"/>
     `;
   }
 }

@@ -54,7 +54,6 @@ export class Badges extends LitElement {
             display: block
         }
         .wrapper {
-            border: 2px solid black;
             display: flex;
         }
         .item {
@@ -68,7 +67,7 @@ export class Badges extends LitElement {
             <div class="wrapper">
                 ${this.searchThis(this.badges,this.searchForThis).map(badge => html`
                 <div class="item">
-                    <badge-component subject="${badge.subject}" badgeTitle="${badge.badgeTitle}" creator="${badge.creator}"></badge-component>
+                    <badge-component subject="${badge.subject}" badgeTitle="${badge.badgeTitle}" creator="${badge.creator}" icon="${badge.icon}"></badge-component>
                 </div>
                 `)}
             </div>

@@ -16,8 +16,7 @@ export class BadgeSearch extends LitElement {
     }
 
     .page-content {
-        margin-top: 0px;
-        padding: 0px;
+        margin: 10px;
     }
 
     .page-head .page-title {

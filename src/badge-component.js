@@ -6,7 +6,8 @@ class BadgeComponent extends LitElement {
   static properties = {
     subject: { type: String },
     badgeTitle: { type: String },
-    creator: { type: String }
+    creator: { type: String },
+    icon: { type: String }
   }
 
   static styles = css`
@@ -128,6 +129,16 @@ class BadgeComponent extends LitElement {
         color: #ffffff;
     }
 
+    .badge-icon {
+      float: right;
+      margin-right: -40px;
+    }
+
+    simple-icon {
+      --simple-icon-width:50px;
+      --simple-icon-height:50px;
+    }
+
   `;
 
   constructor() {
@@ -135,6 +146,7 @@ class BadgeComponent extends LitElement {
     this.subject = 'Technology & Information';
     this.badgeTitle = 'APA Style Citations: Introduction';
     this.creator = 'Victoria Raish';
+    this.icon = 'social:school';
   }
 
   render() {
@@ -151,7 +163,8 @@ class BadgeComponent extends LitElement {
             <div class="badge-image pull-right" style="width: 60px; height: 60px; display: block;">
                 <div style="width: 60px; height: 60px; display: block; background-size: contain; background-repeat: no-repeat;)"></div>
             </div>
-
+            <simple-icon class="badge-icon" icon=${this.icon}>
+            </simple-icon>
             <h3> ${this.badgeTitle}</h3>
             </div>
 
